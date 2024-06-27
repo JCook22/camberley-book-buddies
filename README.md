@@ -36,7 +36,23 @@ Camberley Book Buddies is a book club based in that has recently decided it need
 
 #### Icons
 
+##### Facebook
+
+##### Instagram
+
+##### X
+
+##### Tik Tok
+
 #### Wireframes
+
+##### Home
+
+##### Search Books
+
+##### Add Book
+
+##### Leave Review
 
 ### User Stories
 
