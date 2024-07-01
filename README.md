@@ -48,11 +48,13 @@ Camberley Book Buddies is a book club based in that has recently decided it need
 
 ##### Home
 
-##### Search Books
+##### Search Our Library
 
-##### Add Book
+##### Add A Book
 
-##### Leave Review
+##### Leave A Review
+
+##### Contact Us
 
 ### User Stories
 
