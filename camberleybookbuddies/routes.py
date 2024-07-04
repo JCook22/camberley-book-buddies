@@ -13,7 +13,7 @@ def library():
     return render_template("library.html")
 
 
-@app.route("/search")
+@app.route("/search", methods=["GET", "POST"])
 def search():
     return render_template("search.html")
 

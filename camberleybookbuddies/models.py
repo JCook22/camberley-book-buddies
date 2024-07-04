@@ -3,10 +3,9 @@ from camberleybookbuddies import db
 
 class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    book_name = db.Column(db.String(50), nullable=False)
+    book_title = db.Column(db.String(50), nullable=False)
     book_author = db.Column(db.String(50), nullable=False)
     book_genre = db.Column(db.String(20), nullable=False)
-    book_release_date = db.Column(db.Date, nullable=False)
     reviews = db.relationship("Review", backref="book", cascade="all, delete", lazy=True)
 
     def __repr__(self):
