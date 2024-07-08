@@ -36,6 +36,15 @@ def edit_book(book_id):
     return render_template("edit_book.html", book=book)
 
 
+@app.route("/delete_book/<int:book_id>")
+def delete_book(book_id):
+    book = Book.query.get_or_404(book_id)
+    db.session.delete(book)
+    db.session.commit()
+    return redirect(url_for("library"))
+
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     return render_template("search.html")
