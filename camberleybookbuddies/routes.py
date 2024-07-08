@@ -24,6 +24,18 @@ def add_book():
     return render_template("add_book.html")
 
 
+@app.route("/edit_book/<int:book_id>", methods=["GET", "POST"])
+def edit_book(book_id):
+    book = Book.query.get_or_404(book_id)
+    if request.method == "POST":
+        book.book_title = request.form.get("book_title")
+        book.book_author = request.form.get("book_author")
+        book.book_genre = request.form.get("book_genre")
+        db.session.commit()
+        return redirect(url_for("library"))
+    return render_template("edit_book.html", book=book)
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     return render_template("search.html")
