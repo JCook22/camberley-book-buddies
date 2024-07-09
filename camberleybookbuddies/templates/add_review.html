@@ -5,10 +5,20 @@
 
 <section>
     <div>
-        <h4>You have chosen to review (title of selected record). Please fill in the fields on the form below.</h4>
+        <h4>Finished reading a book and want to leave a review? Please fill in the form below.</h4>
     </div>
     <div class="row">
         <form class="col s12" method="POST" action="{{ url_for('add_review') }}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <select id="book_id" name="book_id" class="validate" required>
+                        <option value="" disabled selected>Choose Book</option>
+                        {% for book in library %}
+                            <option value="{{ book.id }}">{{ book.book_title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+              </div>
           <div class="row">
             <div class="input-field col s12">
               <input id="review_author" name="review_author" minlength="3" maxlength="50" type="text" class="validate" required>
