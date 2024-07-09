@@ -44,6 +44,21 @@ def delete_book(book_id):
     return redirect(url_for("library"))
 
 
+@app.route("/add_review", methods=["GET", "POST"])
+def add_review():
+    library = list(Book.query.order_by(Book.book_title).all())
+    if request.method == "POST":
+        review = Review(
+            review_author=request.form.get("review_author"),
+            review_headline=request.form.get("review_headline"),
+            review_description=request.form.get("review_description"),
+            book_id=request.form.get("book_id")
+        )
+        db.session.add(review)
+        db.session.commit()
+        return redirect(url_for("library"))
+    return render_template("add_review.html", library=library)
+
 
 @app.route("/search", methods=["GET", "POST"])
 def search():

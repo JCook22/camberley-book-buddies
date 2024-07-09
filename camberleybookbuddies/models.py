@@ -15,11 +15,9 @@ class Book(db.Model):
 class Review(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     book_id = db.Column(db.Integer, db.ForeignKey("book.id", ondelete="CASCADE"), nullable=False)
-    book_name = db.Column(db.String(50), nullable=False)
     review_author = db.Column(db.String(50), nullable=False)
     review_headline = db.Column(db.String(75), nullable=False)
     review_description = db.Column(db.Text, nullable=False)
-    review_date = db.Column(db.Date, nullable=False)
     
     def __repr__(self):
         return f"#{self.id} - Author:{self.review_author} | Headline:{self.review_headline}"
