@@ -14,26 +14,32 @@
                     <select id="book_id" name="book_id" class="validate" required>
                         <option value="" disabled selected>Choose Book</option>
                         {% for book in library %}
+                            {% if book == review.book %}
+                            <option value="{{ book.id }}" selected>{{ book.book_title }}</option>
+                            {% else %}
                             <option value="{{ book.id }}">{{ book.book_title }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                 </div>
               </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="review_author" name="review_author" minlength="3" maxlength="50" type="text" class="validate" required>
+              <input id="review_author" name="review_author" minlength="3" maxlength="50" type="text" class="validate" value="{{ review.review_author }}" required>
               <label for="review_author">Your Name:</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="review_headline" name="review_headline" type="text" minlength="3" maxlength="75" class="validate" required>
+              <input id="review_headline" name="review_headline" type="text" minlength="3" maxlength="75" class="validate" value="{{ review.review_headline }}" required>
               <label for="review_headline">Review Headline:</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <textarea id="review_description" name="review_description" minlength="30" maxlength="1000" type="text" class="materialize-textarea validate" required></textarea>
+              <textarea id="review_description" name="review_description" minlength="30" maxlength="1000" type="text" class="materialize-textarea validate" required>
+                {{ review.review_description }}
+              </textarea>
               <label for="review_description">Review Description:</label>
             </div>
           </div>

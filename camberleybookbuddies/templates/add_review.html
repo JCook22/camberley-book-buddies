@@ -14,7 +14,7 @@
                     <select id="book_id" name="book_id" class="validate" required>
                         <option value="" disabled selected>Choose Book</option>
                         {% for book in library %}
-                            <option value="{{ book.id }}">{{ book.book_title }}</option>
+                            <option value="">{{ book.book_title }}</option>
                         {% endfor %}
                     </select>
                 </div>
@@ -40,12 +40,7 @@
           <div class="row">
             <div class="col s12 center-align">
               <button type="submit" class="btn-large light-green darken-1">
-                Submit
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
+
 </section>
 
 {% endblock %}
