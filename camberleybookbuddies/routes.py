@@ -49,20 +49,21 @@ def add_review():
     library = list(Book.query.order_by(Book.book_title).all())
     if request.method == "POST":
         review = Review(
+            book_id=request.form.get("book_id"),
             review_author=request.form.get("review_author"),
             review_headline=request.form.get("review_headline"),
-            review_description=request.form.get("review_description"),
-            book_id=request.form.get("book_id")
-        )
+            review_description=request.form.get("review_description")
+                   )
         db.session.add(review)
         db.session.commit()
         return redirect(url_for("library"))
     return render_template("add_review.html", library=library)
 
 
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    return render_template("search.html")
+@app.route("/reviews")
+def reviews():
+    reviews = list(Review.query.order_by(Review.review_headline).all())
+    return render_template("reviews.html", reviews=reviews)
 
 
 @app.route("/contact")

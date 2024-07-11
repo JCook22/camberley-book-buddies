@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="light-green lighten-1 center-align">Reviews</h3>
+
+<section>
+    <div>
+        <h4>Here you can read other users reviews or add one of your own.</h4>
+    </div>
+    <div class="center-align">
+        <a href="{{ url_for('library') }}" class="btn light-green darken-1">Back To Library</a>
+        <a href="{{ url_for('add_review') }}" class="btn light-green darken-1">Add Review</a>
+    </div>
+
+    <ul class="collapsible">
+      {% for review in reviews %}
+        <li>
+          <div class="collapsible-header white-text light-green darken-1">
+            <i class="fas fa-caret-down"></i>{{ review.review_headline }}</div>
+          <div class="collapsible-body">
+            <p>{{ review.review_author }}</p>
+            <p>{{ review.review_description }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+
+</section>
+
+{% endblock %}
