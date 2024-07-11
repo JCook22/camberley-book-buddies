@@ -7,9 +7,41 @@
     <div>
         <h4>You have chosen to edit a review. Please fill in the fields on the form below.</h4>
     </div>
-    <form>
-        
-    </form>
+    <div class="row">
+        <form class="col s12" method="POST" action="{{ url_for('edit_review', review_id=review.id) }}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <select id="book_id" name="book_id" class="validate" required>
+                        <option value="" disabled selected>Choose Book</option>
+                        {% for book in library %}
+                            <option value="{{ book.id }}">{{ book.book_title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+              </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="review_author" name="review_author" minlength="3" maxlength="50" type="text" class="validate" required>
+              <label for="review_author">Your Name:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="review_headline" name="review_headline" type="text" minlength="3" maxlength="75" class="validate" required>
+              <label for="review_headline">Review Headline:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="review_description" name="review_description" minlength="30" maxlength="1000" type="text" class="materialize-textarea validate" required></textarea>
+              <label for="review_description">Review Description:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large light-green darken-1">
+                    Save Changes
+                  </button>
 </section>
 
 {% endblock %}

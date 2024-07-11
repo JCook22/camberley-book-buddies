@@ -20,6 +20,9 @@
           <div class="collapsible-body">
             <p>{{ review.review_author }}</p>
             <p>{{ review.review_description }}</p>
+            <p>
+              <a href="{{ url_for('edit_review', review_id=review.id) }}" class="btn grey lighten-3 black-text">Edit</a>
+            </p>
           </div>
         </li>
         {% endfor %}

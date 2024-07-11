@@ -60,6 +60,19 @@ def add_review():
     return render_template("add_review.html", library=library)
 
 
+@app.route("/edit_review/<int:review_id>", methods=["GET", "POST"])
+def edit_review(review_id):
+    review = Review.query.get_or_404(review_id)
+    library = list(Book.query.order_by(Book.book_title).all())
+    if request.method == "POST":
+        review.review_author=request.form.get("review_author")
+        review.review_headline=request.form.get("review_headline")
+        review.review_description=request.form.get("review_description")
+        review.book_id=request.form.get("book_id")
+        db.session.commit()
+    return render_template("edit_review.html", review=review, library=library)
+
+
 @app.route("/reviews")
 def reviews():
     reviews = list(Review.query.order_by(Review.review_headline).all())
