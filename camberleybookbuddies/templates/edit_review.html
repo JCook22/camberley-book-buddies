@@ -47,7 +47,12 @@
             <div class="col s12 center-align">
                 <button type="submit" class="btn-large light-green darken-1">
                     Save Changes
-                  </button>
+                </button>
+                <a href="{{ url_for('delete_review', review_id=review.id) }}" class="btn-large red lighten-1">
+                    Delete Review
+                </a>
+            </div>
+        </div>
 </section>
 
 {% endblock %}

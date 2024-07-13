@@ -53,10 +53,10 @@ def add_review():
             review_author=request.form.get("review_author"),
             review_headline=request.form.get("review_headline"),
             review_description=request.form.get("review_description")
-                   )
+        )
         db.session.add(review)
         db.session.commit()
-        return redirect(url_for("library"))
+        return redirect(url_for("reviews"))
     return render_template("add_review.html", library=library)
 
 
@@ -65,12 +65,21 @@ def edit_review(review_id):
     review = Review.query.get_or_404(review_id)
     library = list(Book.query.order_by(Book.book_title).all())
     if request.method == "POST":
+        review.book_id=request.form.get("book_id")
         review.review_author=request.form.get("review_author")
         review.review_headline=request.form.get("review_headline")
         review.review_description=request.form.get("review_description")
-        review.book_id=request.form.get("book_id")
         db.session.commit()
+        return redirect(url_for("reviews"))
     return render_template("edit_review.html", review=review, library=library)
+
+
+@app.route("/delete_review/<int:review_id>")
+def delete_review(review_id):
+    review = Review.query.get_or_404(review_id)
+    db.session.delete(review)
+    db.session.commit()
+    return redirect(url_for("reviews"))
 
 
 @app.route("/reviews")
