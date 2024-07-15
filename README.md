@@ -36,13 +36,25 @@ Camberley Book Buddies is a book club based in that has recently decided it need
 
 #### Icons
 
+##### Book Reader
+
+The book-open-reader icon from fontawesome was selected for the logo because it fits well with the theme of a book club. This is because it shows a person reading from a book and helps provide context to first time users. The solid version was selected because it displays best against the headers green background.
+
 ##### Facebook
+
+The square facebook icon from fontawesome was selected for the link because it displays better against the footers green background. It is clear to the user what it represents and that it will redirect them to facebook should they click it. It matches the other icons from the footer.
 
 ##### Instagram
 
+The square instagram icon from fontawesome was selected for the link because it displays better against the footers green background. It is clear to the user what it represents and that it will redirect them to instagram should they click it. It matches the other icons for the footer.
+
 ##### X
 
+The square X icon from fontawesome was selected for the link because it displays better against the footers green background. It is clear to the user what it represents and that it will redirect them to X should they click it. It matches the other icons for the footer.
+
 ##### Tik Tok
+
+The tik tok icon from fontawesome was selected for the link because it also displays well against the footers green background. It too is clear to the user what is represents and that it will direct them to tik tok should they click it. Unfortunately fontawesome does not have a square version of the logo but it still looks good alongside the others.
 
 #### Wireframes
 
