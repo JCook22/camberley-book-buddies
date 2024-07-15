@@ -52,6 +52,10 @@ The book icon from fontawesome was selected for the call to action button in the
 
 The book open icon from fontawesome was selected for the library page heading. This is different from the links to convey to the user they have opened the library page. It displays well in the heading and makes it more interesting.
 
+##### Edit Icon
+
+The pen to square icon from fontawesome was selected for all edit buttons because it is a well known symbol used to convey the purpose of the button. It looks clean and professional where used.
+
 ##### Contact Icon
 
 The phone icon from fontawesome was selected for the contact link because it is a good way of letting the user know they will be able to find the telephone number and ways to get in touch with the club. The solid version looks good with the other links. 
