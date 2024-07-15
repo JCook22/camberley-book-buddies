@@ -40,9 +40,21 @@ Camberley Book Buddies is a book club based in that has recently decided it need
 
 The book-open-reader icon from fontawesome was selected for the logo because it fits well with the theme of a book club. This is because it shows a person reading from a book and helps provide context to first time users. The solid version was selected because it displays best against the headers green background.
 
-##### Hero Button Book
+##### Home Icon
 
-The book icon from fontawesome was selected for the call to action button in the hero image. The closed book is to represent the fact you have not yet opened the library. It also makes the button more interesting and eye-catching to the user. 
+The house icon from fontawesome was selected for the home link icon because it is one of the most universally used and easily recognised. The solid version displays best alongside the other links. 
+
+##### Library Icon
+
+The book icon from fontawesome was selected for the call to action button in the hero image and library link. The closed book is to represent the fact you have not yet opened the library. It also makes the button more interesting and eye-catching to the user. 
+
+##### Library Title Icon
+
+
+
+##### Contact Icon
+
+The phone icon from fontawesome was selected for the contact link because it is a good way of letting the user know they will be able to find the telephone number and ways to get in touch with the club. The solid version looks good with the other links. 
 
 ##### Facebook
 
