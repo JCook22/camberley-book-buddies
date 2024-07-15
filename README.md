@@ -50,7 +50,7 @@ The book icon from fontawesome was selected for the call to action button in the
 
 ##### Library Title Icon
 
-
+The book open icon from fontawesome was selected for the library page heading. This is different from the links to convey to the user they have opened the library page. It displays well in the heading and makes it more interesting.
 
 ##### Contact Icon
 
