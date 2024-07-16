@@ -8,6 +8,8 @@ main {
     flex: 1 0 auto;
 }
 
+/*
+
 /* index.html styles */
 
 .hero-image {
@@ -26,4 +28,14 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* library.html styles */
+
+.book-card {
+    height: 25vh;
+}
+
+.review-btn {
+    margin-top: 2vh;
 }
