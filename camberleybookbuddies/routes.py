@@ -82,9 +82,10 @@ def delete_review(review_id):
     return redirect(url_for("reviews"))
 
 
-@app.route("/reviews")
-def reviews():
-    reviews = list(Review.query.order_by(Review.review_headline).all())
+@app.route("/reviews/<int:book_id>")
+def reviews(book_id):
+    book = Book.query.get_or_404(book_id)
+    reviews = list(Review.query.filter_by(book_id=book_id).order_by(Review.review_headline).all())
     return render_template("reviews.html", reviews=reviews)
 
 
