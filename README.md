@@ -54,7 +54,11 @@ The book open icon from fontawesome was selected for the library page heading. T
 
 ##### Edit Icon
 
-The pen to square icon from fontawesome was selected for all edit buttons because it is a well known symbol used to convey the purpose of the button. It looks clean and professional where used.
+The pen to square icon from fontawesome was selected for all edit buttons because it is a well known symbol used to convey the purpose of the button. It should immediately be clear to the user what they can expect from the link.
+
+##### Reviews Icon
+
+The users icon from fontawesome was selected for the reviews link in each books card. It does well to symbolize the community aspect of the reviews feature. The icon and text are displayed in the opposite order to the edit link as it looks better, especially on certain screen widths.
 
 ##### Contact Icon
 
