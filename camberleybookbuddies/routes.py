@@ -16,12 +16,27 @@ def library():
 
 @app.route("/add_book", methods=["GET", "POST"])
 def add_book():
+    errors = []
     if request.method == "POST":
-        book = Book(book_title=request.form.get("book_title"), book_author=request.form.get("book_author"), book_genre=request.form.get("book_genre"))
-        db.session.add(book)
-        db.session.commit()
-        return redirect(url_for("add_book"))
-    return render_template("add_book.html")
+        book_title = request.form.get("book_title", "")
+        book_author = request.form.get("book_author", "")
+        book_genre = request.form.get("book_genre", "")
+        if len(book_title) > 50:
+            errors.append('Book title cannot exceed 50 characters.')
+        if len(book_author) > 50:
+            errors.append('Book author cannot exceed 50 characters.')
+        if len(book_genre) > 20:
+            errors.append('Book genre cannot exceed 20 characters.')
+        if len(errors) == 0:
+            book = Book(
+                book_title=book_title,
+                book_author=book_author,
+                book_genre=book_genre,
+            )
+            db.session.add(book)
+            db.session.commit()
+            return redirect(url_for("library"))
+    return render_template("add_book.html", {'errors': errors})
 
 
 @app.route("/edit_book/<int:book_id>", methods=["GET", "POST"])
