@@ -84,11 +84,15 @@ The tik tok icon from fontawesome was selected for the link because it also disp
 
 ##### Home
 
-##### Search Our Library
+##### Library
 
-##### Add A Book
+##### Add Book
 
-##### Leave A Review
+##### Edit Book
+
+##### Add Review
+
+##### Edit Review
 
 ##### Contact Us
 
