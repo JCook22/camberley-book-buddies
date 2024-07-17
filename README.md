@@ -52,6 +52,10 @@ The book icon from fontawesome was selected for the call to action button in the
 
 The book open icon from fontawesome was selected for the library page heading. This is different from the links to convey to the user they have opened the library page. It displays well in the heading and makes it more interesting.
 
+##### Add Icon
+
+The plus icon from fontawesome was selected for the add book and add review buttons as it makes it very clear to the user that they are for adding new records. It improves the overall look of the button and makes them easier to find at a glance.
+
 ##### Edit Icon
 
 The pen to square icon from fontawesome was selected for all edit buttons because it is a well known symbol used to convey the purpose of the button. It should immediately be clear to the user what they can expect from the link.
