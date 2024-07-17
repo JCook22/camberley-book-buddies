@@ -39,3 +39,14 @@ main {
 .review-btn {
     margin-top: 2vh;
 }
+
+/* contact.html styles */
+
+.map-image {
+    background-image: url('https://github.com/JCook22/camberley-book-buddies/blob/main/camberleybookbuddies/static/images/map-image.png?raw=true');
+    width: 100%;
+    height: 25vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
