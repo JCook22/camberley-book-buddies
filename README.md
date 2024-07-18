@@ -41,8 +41,11 @@ The main users of the site will be:
 
 #### User Stories
 
-* As a casual reader, I am looking for somewhere that I can go to find recommendations on new books and authors.
-* As a casual reader, I am looking to find new friends to share experiences with.
+* As a casual reader, I am looking for somewhere I can find recommendations on new books and authors.
+* As a casual reader, I am looking to find new friends and socialize with others.
+* As a reading enthusiast, I am looking to guide new readers towards my favourite books.
+* As a reading enthusiast, I am looking to share ideas about books with likeminded people.
+* As a reading enthusiast, I am looking to add books that I have read when I finish them. 
 
 ### Design
 
