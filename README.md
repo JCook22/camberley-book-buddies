@@ -5,8 +5,9 @@ Camberley Book Buddies is a book club based in that has recently decided it need
 ## Table of Contents
 
 **[1. User Experience](#user-experience)**
-* [1.1 Design](#design)
-* [1.2 User Stories](#user-stories)
+* [1.1 User Information](#user-information)
+* [1.2 Design](#design)
+* [1.3 User Stories](#user-stories)
 
 **[2. Features](#features)**
 * [2.1 Existing Features](#existing-features)
@@ -29,7 +30,20 @@ Camberley Book Buddies is a book club based in that has recently decided it need
 * [6.3 Code](#code)
 
 ## User Experience
- 
+
+### User Information
+
+#### Typical Users
+
+The main users of the site will be:
+* Casual readers - People new to reading and looking for likeminded people to share their newfound hobby with.
+* Reading enthusiasts - People who love to read books every day and are always looking for something to read.
+
+#### User Stories
+
+* As a casual reader, I am looking for somewhere that I can go to find recommendations on new books and authors.
+* As a casual reader, I am looking to find new friends to share experiences with.
+
 ### Design
 
 #### Typography
@@ -101,8 +115,6 @@ The tik tok icon from fontawesome was selected for the link because it also disp
 ##### Edit Review
 
 ##### Contact
-
-### User Stories
 
 ## Features
 
