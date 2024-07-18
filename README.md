@@ -34,6 +34,8 @@ Camberley Book Buddies is a book club based in that has recently decided it need
 
 #### Typography
 
+There are two fonts in use for the website, both taken from google fonts. The first is Playwrite England Joined, which was selected because it is a calligraphy like style and is much more unique to the user. The elegancy of the font is quite fitting for a book club. The second font selected is Roboto. Roboto was chosen for it's simplicity and popularity, the text is much easier to read than the heading font so it should improve user experience.
+
 #### Icons
 
 ##### Book Reader
@@ -98,7 +100,7 @@ The tik tok icon from fontawesome was selected for the link because it also disp
 
 ##### Edit Review
 
-##### Contact Us
+##### Contact
 
 ### User Stories
 
