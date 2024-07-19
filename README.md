@@ -109,7 +109,11 @@ The tik tok icon from fontawesome was selected for the link because it also disp
 
 ##### Home
 
+[index.html](https://github.com/JCook22/camberley-book-buddies/blob/main/camberleybookbuddies/static/images/wireframes/index-wireframe.png?raw=true)
+
 ##### Library
+
+[library.html](https://github.com/JCook22/camberley-book-buddies/blob/main/camberleybookbuddies/static/images/wireframes/library-wireframe.png?raw=true)
 
 ##### Add Book
 
