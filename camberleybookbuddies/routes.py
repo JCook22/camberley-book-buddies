@@ -41,14 +41,27 @@ def add_book():
 
 @app.route("/edit_book/<int:book_id>", methods=["GET", "POST"])
 def edit_book(book_id):
+    errors = []
     book = Book.query.get_or_404(book_id)
     if request.method == "POST":
-        book.book_title = request.form.get("book_title")
-        book.book_author = request.form.get("book_author")
-        book.book_genre = request.form.get("book_genre")
-        db.session.commit()
-        return redirect(url_for("library"))
-    return render_template("edit_book.html", book=book)
+        book_title = request.form.get("book_title", "")
+        book_author = request.form.get("book_author", "")
+        book_genre = request.form.get("book_genre", "")
+        if len(book_title) > 50:
+            errors.append('Book title cannot exceed 50 characters.')
+        if len(book_author) > 50:
+            errors.append('Book author cannot exceed 50 characters.')
+        if len(book_genre) > 20:
+            errors.append('Book genre cannot exceed 20 characters.')
+        if len(errors) == 0:
+            book = Book(
+                book_title=book_title,
+                book_author=book_author,
+                book_genre=book_genre,
+            )
+            db.session.commit()
+            return redirect(url_for("library"))
+    return render_template("edit_book.html", book=book, errors=errors)
 
 
 @app.route("/delete_book/<int:book_id>")
