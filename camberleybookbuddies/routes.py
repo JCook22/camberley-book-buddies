@@ -36,7 +36,7 @@ def add_book():
             db.session.add(book)
             db.session.commit()
             return redirect(url_for("library"))
-    return render_template("add_book.html", {'errors': errors})
+    return render_template("add_book.html", errors=errors)
 
 
 @app.route("/edit_book/<int:book_id>", methods=["GET", "POST"])

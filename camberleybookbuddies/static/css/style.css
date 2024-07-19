@@ -76,3 +76,9 @@ h3 {
     background-position: center;
 }
 
+/* add and edit function errors */
+
+.errors {
+    color: red;
+    
+}
