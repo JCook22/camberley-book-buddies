@@ -171,10 +171,12 @@ HTML, CSS, JavaScript, Python, SQL
 
 ## Credits
 
-### Content
-
 ### Media
 
+The home page image was taken from pexels: https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg
+
 ### Code
+
+Thank you to my mentor Brian Macharia for his help with python front end validation for my add book function. 
 
 
