@@ -117,13 +117,23 @@ The tik tok icon from fontawesome was selected for the link because it also disp
 
 ##### Add Book
 
+[add_book.html](https://github.com/JCook22/camberley-book-buddies/blob/main/camberleybookbuddies/static/images/wireframes/add-book-wireframe.png?raw=true)
+
 ##### Edit Book
+
+[edit_book.html](https://github.com/JCook22/camberley-book-buddies/blob/main/camberleybookbuddies/static/images/wireframes/edit-book-wireframe.png?raw=true)
 
 ##### Add Review
 
+[add_review.html](https://github.com/JCook22/camberley-book-buddies/blob/main/camberleybookbuddies/static/images/wireframes/add-review-wireframe.png?raw=true)
+
 ##### Edit Review
 
+[edit_review.html](https://github.com/JCook22/camberley-book-buddies/blob/main/camberleybookbuddies/static/images/wireframes/edit-review-wireframe.png?raw=true)
+
 ##### Contact
+
+[contact.html](https://github.com/JCook22/camberley-book-buddies/blob/main/camberleybookbuddies/static/images/wireframes/contact-wireframe.png?raw=true)
 
 ## Features
 
