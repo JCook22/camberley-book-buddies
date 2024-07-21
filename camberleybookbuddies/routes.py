@@ -84,7 +84,7 @@ def add_review():
         )
         db.session.add(review)
         db.session.commit()
-        return redirect(url_for("reviews"))
+        return redirect(url_for("reviews", book_id=review.book_id))
     return render_template("add_review.html", library=library)
 
 
