@@ -181,6 +181,7 @@ The footer at the bottom of every page contains the address information of the c
 ### Possible Future Features
 
 Had there been more time for this project there is a range of features that would be good to include:
+
 #### User accounts and admin accounts
 
 This would be vital if ever used in a real world setting. The ability for anyone to add, edit and delete the data anonymously would likely be abused and needs protecting against.
@@ -197,13 +198,70 @@ It would be a nice feature to have some customer testimonials and a more fleshed
 
 Being able to downvote and upvote reviews would be a good feature for users to have. This would encourage more engagement between users and each others posts. With this functionality you could also list reviews by their popularity instead of headline, ensuring the more popular reviews are seen first by future users.
 
+#### User Forum
+
+A messaging board for all of the members of the book club would be a brilliant future edition as it would give them a place to chat about books and upcoming events. This would help people connect and socialize beyond the review system in place currently.
+
 ## Testing
 
 ### User Stories
 
 #### Casual Readers
 
+* As a casual reader, I am looking for somewhere I can find recommendations on new books and authors.
+**Test**: Visit the library page to look for books and authors.
+**Outcome:**: When the library page opens the first thing you see is a selection of books, their author and genre. This meets the user requirement, but will be much better when the database contains more books.
+
+* As a casual reader, I am looking to find new friends and socialize with others.
+**Test***: Visit the contact us page to find the details of the club.
+**Outcome**: When opening the contact us page you can easily find the address information, club meeting times and the map of where the club is located. If that's not enough, the enquiries section gives the user the option to contact the club for further information. This meets the users requirement but it would be good to have a messaging forum in the future to allow people to socialize outside of the reviews and club meetings.
+
 #### Reading Enthusiasts
+
+* As a reading enthusiast, I am looking to guide new readers towards my favourite books.
+**Test**: Visit the library to add a book.
+**Outcome**: When opening the library it is easy to find the add book button at the top. Clicking that brings up a very simple form to complete. Once submitted it returns the user to the library page where they can see the new book amongst the others. There is then the option writing a good review for the book which will entice others. This meets the user requirement.
+
+* As a reading enthusiast, I am looking to share ideas about books with likeminded people.
+**Test**: Visit the library to review a book.
+**Outcome**: When opening the library you can see what books are currently available to review and have the option to either visit a certain books review page first or add a review from the library page. Once add review is clicked it brings up a form to complete, once submitted it returns you to the reviews page for the book.
+
+### Manual Testing
+
+| Test Label                | Action                                                                          | Expected Outcome                                                             | Outcome |
+| ------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------- |
+| Logo home link            | From any page, click the Camberley Book Buddies logo in the header.             | The user will be taken back to the home page.                                | PASS    |
+| Home navbar link          | From any page, click the Home link in the navbar.                               | The user will be taken back to the home page.                                | PASS    |
+| Library navbar link       | From any page, click the Library link in the navbar.                            | The user will be taken to the library page.                                  | PASS    |
+| Library button link       | From home page, click on the Library button in the center of the image.         | The user will be taken to the library page.                                  | PASS    |
+| Contact Us navbar link    | From any page, click the Contact Us link in the navbar.                         | The user will be taken to the contact us page.                               | PASS    |
+| X footer link             | From any page, click the X link in the footer.                                  | The X website will open in a new window.                                     | PASS    |
+| Facebook footer link      | From any page, click the Facebook link in the footer.                           | The Facebook website will open in a new window.                              | PASS    |
+| Instagram footer link     | From any page, click the Instagram link in the footer.                          | The Instagram website will open in a new window.                             | PASS    |
+| Tik Tok footer link       | From any page, click the Tik Tok link in the footer.                            | The Tik Tok website will open in a new window.                               | PASS    |
+| Add Book link             | From the library page, click the Add Book button.                               | The user will be taken to the Add Book form page.                            | PASS    |
+| Edit Book link            | From the library page, click the Edit Book button on any book.                  | The user will be taken to the Edit Book form page.                           | PASS    |
+| Add Review link           | From the library page, click the Add Review button.                             | The user will be taken to the Add Review form page.                          | PASS    |
+| Reviews link              | From the library page, click the Reviews button on any book.                    | The reviews for the book selected will be retrieved for the user.            | PASS    |
+| Add Book validation 1     | Attempt to submit a blank form on the Add Book page.                            | The form will not submit and the user will be prompted to fill it out.       | PASS    |
+| Add Book validation 2     | Attempt to use over 50 characters on all fields of the Add Book page.           | The errors will show the user the maximum characters for each field.         | PASS    |
+| Add Book submit           | Attempt to submit valid data using the submit button on Add Book form.          | The form will submit, return to the library and display the new book.        | PASS    |
+| Edit Book validation 1    | Attempt to submit a blank form on the Edit Book page.                           | The form will not submit and the user will be prompted to fill it out.       | PASS    |
+| Edit Book validation 2    | Attempt to use over 50 characters on all fields of the Edit Book page.          | The errors will show the user the maximum characters for each field.         | PASS    |
+| Edit Book save changes    | Temporarily edit a book with valid data and click Save Changes button.          | The form will submit, return to the library and display the updated book.    | PASS    |
+| Edit Book delete button   | Temporarily create a book, then click the delete button inside its edit page.   | The book will delete, return to the library and the book will be deleted.    | PASS    |
+| Add Review validation 1   | Attempt to submit a blank form on the Add Review page.                          | The form will not submit and the user will be prompted to fill it out.       | PASS    |
+| Add Review validation 2   | Attempt to use over 50 characters for Review Author field.                      | The field will stop allowing input when 50 character limit is met.           | PASS    |
+| Add Review validation 3   | Attempt to use over 75 characters for Review Headline field.                    | The field will stop allowing input when 75 character limit is met.           | PASS    |
+| Add Review validation 4   | Attempt to use less than 30 characters for Review Description field.            | The form will not submit and the user prompted to use 30 or more characters. | PASS    |
+| Add Review submit         | Attempt to submit valid data using the submit button on Add Review form.        | The form will submit, return to the reviews and display the new book.        | PASS    |
+| Edit Review validation 1  | Attempt to submit a blank form on the Edit Review page.                         | The form will not submit and the user will be prompted to fill it out.       | PASS    |
+| Edit Review validation 2  | Attempt to use over 50 characters for Review Author field.                      | The field will stop allowing input when 50 character limit is met.           | PASS    |
+| Edit Review validation 3  | Attempt to use over 75 characters for Review Headline field.                    | The field will stop allowing input when 75 character limit is met.           | PASS    |
+| Edit Review validation 4  | Attempt to use less than 30 characters for Review Description field.            | The form will not submit and the user prompted to use 30 or more characters. | PASS    |
+| Edit Review delete button | Temporarily create a review, then click the delete button inside its edit page. | The review will delete, return to the reviews and the book will be deleted.  | PASS    |
+
+Additionally, all pages have been tested for responsivity using Google Chrome Developer Tools. They have also been tested using a variety of different browsers (Microsoft Edge, Mozilla Firefox, Google Chrome).
 
 ## Technologies
 
