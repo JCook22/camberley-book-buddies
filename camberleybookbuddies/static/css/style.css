@@ -68,6 +68,24 @@ h3 {
     margin-top: 2vh;
 }
 
+.book-card {
+    margin: 20px 0;
+}
+
+/* media query to prevent cards overlapping on small screens */
+
+@media (min-width: 600px) {
+    .book-card {
+        margin: 20px 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .book-card {
+        margin: 20px 15px;
+    }
+}
+
 /* contact.html styles */
 
 .map-image {
