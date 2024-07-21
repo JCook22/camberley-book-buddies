@@ -267,13 +267,13 @@ A messaging board for all of the members of the book club would be a brilliant f
 
 * **CSS**: WC3 valdiator found no issues with the CSS. It validates as CSS level 3 + SVG.
 
+* **JS**: JSHint found no issues with the JavaScript. It is only used from Materialize CSS in order to initialize certain elements.
 
+* **Python**: Synks code checker found no issues with the Python code. 
 
 ### Responsivity and Browser Compatibility 
 
 Additionally, all pages have been tested for responsivity using Google Chrome Developer Tools. They have also been tested using a variety of different browsers (Microsoft Edge, Mozilla Firefox, Google Chrome).
-
-
 
 ## Technologies
 
