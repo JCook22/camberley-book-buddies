@@ -98,7 +98,7 @@ def edit_review(review_id):
         review.review_headline=request.form.get("review_headline")
         review.review_description=request.form.get("review_description")
         db.session.commit()
-        return redirect(url_for("reviews"))
+        return redirect(url_for("reviews", book_id=review.book_id))
     return render_template("edit_review.html", review=review, library=library)
 
 
@@ -107,7 +107,7 @@ def delete_review(review_id):
     review = Review.query.get_or_404(review_id)
     db.session.delete(review)
     db.session.commit()
-    return redirect(url_for("reviews"))
+    return redirect(url_for("reviews", book_id=review.book_id))
 
 
 @app.route("/reviews/<int:book_id>")
