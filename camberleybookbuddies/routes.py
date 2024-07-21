@@ -54,11 +54,9 @@ def edit_book(book_id):
         if len(book_genre) > 20:
             errors.append('Book genre cannot exceed 20 characters.')
         if len(errors) == 0:
-            book = Book(
-                book_title=book_title,
-                book_author=book_author,
-                book_genre=book_genre,
-            )
+            book.book_title=book_title,
+            book.book_author=book_author,
+            book.book_genre=book_genre
             db.session.commit()
             return redirect(url_for("library"))
     return render_template("edit_book.html", book=book, errors=errors)
