@@ -37,7 +37,7 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <textarea id="review_description" name="review_description" minlength="30" maxlength="1000" type="text" class="materialize-textarea validate" required>
+              <textarea id="review_description" name="review_description" minlength="30" maxlength="1000" class="materialize-textarea validate" required>
                 {{ review.review_description }}
               </textarea>
               <label for="review_description">Review Description:</label>
@@ -52,7 +52,9 @@
                     Delete Review
                 </a>
             </div>
-        </div>
+          </div>
+        </form>
+      </div>
 </section>
 
 {% endblock %}
