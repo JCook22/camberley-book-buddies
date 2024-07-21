@@ -27,9 +27,8 @@ Camberley Book Buddies is a book club based in that has recently decided it need
 * [5.3 Forking this repository](#forking-this-repository)
 
 **[6. Credits](#credits)**
-* [6.1 Content](#content)
-* [6.2 Media](#media)
-* [6.3 Code](#code)
+* [6.1 Media](#media)
+* [6.2 Code](#code)
 
 ## User Experience
 
@@ -138,6 +137,38 @@ The tik tok icon from fontawesome was selected for the link because it also disp
 ## Features
 
 ### Existing Features
+
+#### Header & Navbar
+
+The navbar is displayed in the header at the top of the page. On small screens the company logo is reduced to a acronym and shifted to the center, the links are reduced to a sidenav. The navbar features three links to the main pages; home, library and contact. The logo also acts as a home page link.
+
+#### Hero Image & Call To Action
+
+The hero image is designed to grab the attention of the visitor as soon as they load the page. It features bookshelves to fit the theme of a library and the books within. The library call to action button sits in the middle of the hero image, the green colour constrasts well against the image and the user is naturally drawn to it.
+
+#### Library
+
+The library page is the main feature because it contains the database and the majority of the interactive features. Each book currently added to the database is displayed in alphabetical order, each with it's own Edit and Reviews button links. Above the books is a further 2 link buttons, one for Add Book and another for Add Review.
+
+#### Add Book
+
+The add book button can be found on the library page and brings the user to the add book page. The form is simple with only 3 fields to make adding books as easy as possible. There is validation in place to ensure that the user doesn't leave fields blank or go over character limits. Should the user have any errors they are displayed at the bottom of the form above the submit button. 
+
+#### Edit Book
+
+The edit book button can be found on the cards containing the books in the library. If clicked the user is taken to the edit book page. The form is identical to the add book form however the fields come pre-filled with the existing book information. The user must click the save changes button at the bottom of the form if they want to update any of the fields, the new information must meet the same data validation rules as adding books. There is a delete book button should the user wish to remove a book completely, this will also delete any related reviews.
+
+#### Reviews
+
+The reviews page is reached by clicking the reviews button on an individual book. It will show the reviews in a list on the page, sorted in alphabetical order of the review headline. The user must click on a review to see more information about it or find the edit button which leads to the edit review page. Above the books are 2 buttons, one for going back to library page and one for adding a new review. 
+
+#### Add Review
+
+#### Edit Review
+
+#### Contact Page
+
+#### Footer
 
 ### Possible Future Features
 
