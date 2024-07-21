@@ -164,15 +164,46 @@ The reviews page is reached by clicking the reviews button on an individual book
 
 #### Add Review
 
+The add review button is found in the library and on the reviews page for each book. It leads the user to the add review page, which contains a simple 4 field form. Rather than enter the book name manually, the user can select one from the dropbox list provided. There is validation to ensure the user does not leave any fields blank and character limits for all 3. When the user is finished they can click the submit button which should take them back to reviews where they can see what they just created.
+
 #### Edit Review
+
+The edit review button is found in each reviews card when the user expands them for more information. It takes the user to the edit review page which is very similar to the add review form except the fields will be pre-filed with the current data. When the user has finished making changes they can click save changes. There is also a delete button should the user wish to delete the review.
 
 #### Contact Page
 
+The contact page is quite simple. There is a how to find us section which gives the user information on how to find the club, including the meeting times and a map of the surrounding area with the location pinned. There is an equiries section for users who would like to find the phone number or email of the club.
+
 #### Footer
+
+The footer at the bottom of every page contains the address information of the club and a section for social media links. This can help promote engagement and gives users more options for learning about the club.
 
 ### Possible Future Features
 
+Had there been more time for this project there is a range of features that would be good to include:
+#### User accounts and admin accounts
+
+This would be vital if ever used in a real world setting. The ability for anyone to add, edit and delete the data anonymously would likely be abused and needs protecting against.
+
+#### Search function
+
+As the database grew it would become increasingly important for there to be more efficient ways to retrieve specific books or reviews. A search function that could filter books or reviews by title / headline and author would be very useful.
+
+#### About page & Testimonials
+
+It would be a nice feature to have some customer testimonials and a more fleshed out company biography on a seperate About page. This would be more effective at drawing in new members and increasing visitors to the club meetings.
+
+#### Downvote & Upvote reviews
+
+Being able to downvote and upvote reviews would be a good feature for users to have. This would encourage more engagement between users and each others posts. With this functionality you could also list reviews by their popularity instead of headline, ensuring the more popular reviews are seen first by future users.
+
 ## Testing
+
+### User Stories
+
+#### Casual Readers
+
+#### Reading Enthusiasts
 
 ## Technologies
 
@@ -188,7 +219,6 @@ HTML, CSS, JavaScript, Python, SQL
 - Google Fonts - Used to import fonts.
 - Font Awesome - Used to import icons.
 - Chrome Developer Tools - Used to test site responsiveness and design features.
-- PageSpeed - Used to lighthouse test the site.
 - Flask SQLAlchemy - Used for SQL features on the site.
 - Materialize CSS - Used to speed up the design of the site.
 
