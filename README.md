@@ -261,7 +261,19 @@ A messaging board for all of the members of the book club would be a brilliant f
 | Edit Review validation 4  | Attempt to use less than 30 characters for Review Description field.            | The form will not submit and the user prompted to use 30 or more characters. | PASS    |
 | Edit Review delete button | Temporarily create a review, then click the delete button inside its edit page. | The review will delete, return to the reviews and the book will be deleted.  | PASS    |
 
+### Validator Testing
+
+* **HTML**: WC3 validator found no issues with the HTML for any of the pages. It was flagging where python has been used to extend the templates or for navigation links, but these warnings can be ignored.
+
+* **CSS**: WC3 valdiator found no issues with the CSS. It validates as CSS level 3 + SVG.
+
+
+
+### Responsivity and Browser Compatibility 
+
 Additionally, all pages have been tested for responsivity using Google Chrome Developer Tools. They have also been tested using a variety of different browsers (Microsoft Edge, Mozilla Firefox, Google Chrome).
+
+
 
 ## Technologies
 
