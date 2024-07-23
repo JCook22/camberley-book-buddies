@@ -54,9 +54,9 @@ def edit_book(book_id):
         if len(book_genre) > 20:
             errors.append('Book genre cannot exceed 20 characters.')
         if len(errors) == 0:
-            book.book_title=book_title,
-            book.book_author=book_author,
-            book.book_genre=book_genre
+            book.book_title = book_title,
+            book.book_author = book_author,
+            book.book_genre = book_genre
             db.session.commit()
             return redirect(url_for("library"))
     return render_template("edit_book.html", book=book, errors=errors)
@@ -91,10 +91,10 @@ def edit_review(review_id):
     review = Review.query.get_or_404(review_id)
     library = list(Book.query.order_by(Book.book_title).all())
     if request.method == "POST":
-        review.book_id=request.form.get("book_id")
-        review.review_author=request.form.get("review_author")
-        review.review_headline=request.form.get("review_headline")
-        review.review_description=request.form.get("review_description")
+        review.book_id = request.form.get("book_id")
+        review.review_author = request.form.get("review_author")
+        review.review_headline = request.form.get("review_headline")
+        review.review_description = request.form.get("review_description")
         db.session.commit()
         return redirect(url_for("reviews", book_id=review.book_id))
     return render_template("edit_review.html", review=review, library=library)
@@ -111,7 +111,8 @@ def delete_review(review_id):
 @app.route("/reviews/<int:book_id>")
 def reviews(book_id):
     book = Book.query.get_or_404(book_id)
-    reviews = list(Review.query.filter_by(book_id=book_id).order_by(Review.review_headline).all())
+    reviews = list(Review.query.filter_by(book_id=book_id).order_by(
+        Review.review_headline).all())
     return render_template("reviews.html", reviews=reviews)
 
 
@@ -120,3 +121,21 @@ def contact():
     return render_template("contact.html")
 
 
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html")
+
+
+@app.errorhandler(500)
+def not_found(e):
+    return render_template("500.html")
+
+
+@app.errorhandler(405)
+def not_found(e):
+    return render_template("405.html")
+
+
+@app.errorhandler(403)
+def not_found(e):
+    return render_template("403.html")
