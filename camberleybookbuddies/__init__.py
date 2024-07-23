@@ -19,4 +19,3 @@ else:
 db = SQLAlchemy(app)
 
 from camberleybookbuddies import routes  # noqa
-
