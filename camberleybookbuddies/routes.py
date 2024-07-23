@@ -21,12 +21,12 @@ def add_book():
         book_title = request.form.get("book_title", "")
         book_author = request.form.get("book_author", "")
         book_genre = request.form.get("book_genre", "")
-        if len(book_title) > 50:
-            errors.append('Book title cannot exceed 50 characters.')
-        if len(book_author) > 50:
-            errors.append('Book author cannot exceed 50 characters.')
-        if len(book_genre) > 20:
-            errors.append('Book genre cannot exceed 20 characters.')
+        if len(book_title) < 3 or len(book_title) > 50:
+            errors.append('Book title must be between 3 to 50 characters long.')
+        if len(book_title) < 3 or len(book_author) > 50:
+            errors.append('Book author must be between 3 to 50 characters long.')
+        if len(book_genre) < 3 or len(book_title) > 20:
+            errors.append('Book genre must be between 3 to 20 characters long.')
         if len(errors) == 0:
             book = Book(
                 book_title=book_title,
@@ -47,12 +47,12 @@ def edit_book(book_id):
         book_title = request.form.get("book_title", "")
         book_author = request.form.get("book_author", "")
         book_genre = request.form.get("book_genre", "")
-        if len(book_title) > 50:
-            errors.append('Book title cannot exceed 50 characters.')
-        if len(book_author) > 50:
-            errors.append('Book author cannot exceed 50 characters.')
-        if len(book_genre) > 20:
-            errors.append('Book genre cannot exceed 20 characters.')
+        if len(book_title) < 3 or len(book_title) > 50:
+            errors.append('Book title must be between 3 to 50 characters long.')
+        if len(book_title) < 3 or len(book_author) > 50:
+            errors.append('Book author must be between 3 to 50 characters long.')
+        if len(book_title) < 3 or len(book_genre) > 20:
+            errors.append('Book genre must be between 3 to 20 characters long.')
         if len(errors) == 0:
             book.book_title = book_title,
             book.book_author = book_author,
