@@ -1,35 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="light-green lighten-1 center-align">Library <i class="fa-solid fa-book-open"></i></h3>
-
-<section>
-    <div>
-        <h4 class="center-align">Welcome to our library! Here you can view records of all the books previously read by members and the reviews.</h4>
-    </div>
-    <div class="center-align">
+<main>
+    <section class="introduction">
+        <h3 class="light-green lighten-1 center-align">Library <i class="fa-solid fa-book-open"></i></h3>
+        <p class="center-align">Welcome to our library! Here you can view records of all the books previously read by members and the reviews.</h4>
         <a href="{{ url_for('add_book') }}" class="btn light-green darken-1">Add Book <i class="fa-solid fa-plus"></i></a>
         <a href="{{ url_for('add_review') }}" class="btn light-green darken-1">Add Review <i class="fa-solid fa-plus"></i></a>
-    </div>
+    </section>
 
-    <div class="row">
-        {% for book in library %}
-        <div class="col s12 m6 l3">
-            <div class="card light-green darken-1 center-align book-card">
-                <div class="card-content white-text">
-                    <span class="card-title">{{ book.book_title }}</span>
-                    <p>{{ book.book_author }}</p>
-                    <p>{{ book.book_genre }}</p>
-                </div>
-                <div class="card-action">
-                    <a href="{{ url_for('edit_book', book_id=book.id) }}" class="btn grey lighten-3 black-text"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
-                    <a href="{{ url_for('reviews', book_id=book.id) }}" class="btn grey lighten-3 black-text review-btn">Reviews <i class="fa-solid fa-users"></i></a>
+    <section class="library-container">
+        <div class="row">
+            {% for book in library %}
+            <div class="col s12 m6 l3">
+                <div class="card light-green darken-1 center-align book-card">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{ book.book_title }}</span>
+                        <p>{{ book.book_author }}</p>
+                        <p>{{ book.book_genre }}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{{ url_for('edit_book', book_id=book.id) }}" class="btn grey lighten-3 black-text"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                        <a href="{{ url_for('reviews', book_id=book.id) }}" class="btn grey lighten-3 black-text review-btn">Reviews <i class="fa-solid fa-users"></i></a>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-
-</section>
-
+    </section>
+</main>
 {% endblock %}
