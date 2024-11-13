@@ -1,7 +1,5 @@
 # Camberley Book Buddies
 
-**Link to live project on Heroku:** https://camberley-book-buddies-526ca2505de2.herokuapp.com/
-
 Camberley Book Buddies is a book club based in that has recently decided it needs a website to cater to a larger audience and promote further engagement with it's members. The sites target audience is anyone who enjoys reading books, particularly those local to the club. The website should be beneficial to it's users as they will be able to find information on the books that have been read by the club and read or give their own opinions in the form of reviews.
 
 ![Image of home page](camberleybookbuddies/static/images/home-page.png)
@@ -271,7 +269,7 @@ A messaging board for all of the members of the book club would be a brilliant f
 
 * **JS**: JSHint found no issues with the JavaScript. It is only used from Materialize CSS in order to initialize certain elements.
 
-* **Python**: All python files have been through Code Institutes Python Linter with no issues.
+* **Python**: Synks code checker found no issues with the Python code. 
 
 ### Responsivity and Browser Compatibility 
 
@@ -296,53 +294,11 @@ HTML, CSS, JavaScript, Python, SQL
 
 ## Deployment 
 
-### To Deploy Locally
+### Deploying this repository
 
-* Ensure you have an IDE capable of running python3. Gitpod was used for the creation of this project, others may vary.
-* Find the repository at https://github.com/JCook22/camberley-book-buddies. Click the green code button and copy the link provided. 
-* Create a new workspace on Gitpod and copy in the link provided in the previous step. After creating it will take a short time to build.
-* When the new workspace opens you must run the pip command in the terminal to the install the requirements: **pip install -r requirements. txt**
-* Create a .gitignore file to hide sensitive information.
-* Create a env.py file to hold your environment variables. Open the file and add the following (you can change the secret key to any string you like):
-![image-of-settings](https://github.com/JCook22/camberley-book-buddies/blob/main/camberleybookbuddies/static/images/environment-walkthrough.png?raw=true) 
-* In the terminal, enter the following commands:
-    * set_pg
-    * psql
-    * CREATE DATABASE camberleybookbuddies;     - creates the new database
-    * \c camberleybookbuddies;  - connects to the database
-    * \q    - exit psql
-* Now we need run the following python commands:
-    * python3
-    * from camberleybookbuddies import db
-    * db.create_all()   - populates database with tables
-    * exit()    - exit back to normal terminal
-* Now all that is left to do is type 'python3 run.py' in to the terminal and open the preview.
+### Cloning this repository
 
-### To Deploy To Heroku
-
-* Update requirements.txt by typing 'pip freeze --local > requirements.txt'.
-* Create a file named Procfile if one doesn't exist already.
-* Inside the procfile type the following 'web: python run.py'.
-* Inside the init file, make sure the code matches the following:
-![image-of-init-file](https://github.com/JCook22/camberley-book-buddies/blob/main/camberleybookbuddies/static/images/heroku-walkthrough.png?raw=true)
-* Save all files and add, commit and push them to github.
-* Open Heroku and create a new app.
-* Open Settings, then click Reveal Config Vars. Add the 5 following variables:
-    * DATABASE_URL : your_database_url
-    * IP : 0.0.0.0
-    * PORT : 5000
-    * SECRET_KEY : your_secret_key
-    * DEBUG : False
-* Navigate to the Deploy section for the app and under Deployment Method choose Connect to GitHub.
-* Search for the github repository and click Connect.
-* In the Manual Deploy section click Deploy Branch.
-* Click the More button to find the Run Console function.
-* When asked, type 'Python3' in to the console and click Run.
-* Now type the following in the console:
-    * from camberleybookbuddies import db
-    * db.create_all()
-    * exit()
-* The app and database are now live and ready to open.
+### Forking this repository
 
 ## Credits
 
