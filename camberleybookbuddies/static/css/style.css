@@ -3,7 +3,6 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    margin: 0;
 }
 
 main {
@@ -57,48 +56,33 @@ h3 {
     align-items: center;
     text-align: center;
     max-width: 60%;
-    margin: 0 auto;
 }
 
 /* library.html styles */
-.library-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
 
 .book-card {
-    height: auto;
-    margin: 20px;
-    padding: 20px;
-    width: calc(100% - 40px); /* Full width on small screens */
-    max-width: 300px; /* Limit width */
-    background-color: #a3d477;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    height: 25vh;
 }
 
 .review-btn {
     margin-top: 2vh;
 }
 
-/* Responsive layout adjustments for .book-card */
+.book-card {
+    margin: 20px 0;
+}
+
+/* media query to prevent cards overlapping on small screens */
+
 @media (min-width: 600px) {
     .book-card {
-        width: calc(50% - 40px); /* Two cards per row */
+        margin: 20px 10px;
     }
 }
 
 @media (min-width: 992px) {
     .book-card {
-        width: calc(33.33% - 40px); /* Three cards per row */
+        margin: 20px 15px;
     }
 }
 
@@ -117,4 +101,5 @@ h3 {
 
 .errors {
     color: red;
+    
 }
